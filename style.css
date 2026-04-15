@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #050a1e; /* كحلي غامق جداً للفخامة */
+    --accent-color: #3498db;  /* أزرق فاتح للروابط والزراير */
+    --bg-color: #f8f9fa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    direction: rtl; /* لضبط الاتجاه العربي */
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+    background: #1a252f;
+    display: flex;
+    justify-content: center; /* ده المسؤول عن التوسط */
+    align-items: center;     /* ده بيوسطهم رأسياً */
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    direction: ltr;          /* عشان Home تبدأ من الشمال */
+    gap: 10px;               /* بيعمل مسافات متساوية بين الروابط */
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--white);
+    min-height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* تنسيق الجداول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) { background-color: #fdfdfd; }
+
+tr:hover { 
+    background-color: #f1f7fd; 
+    transition: 0.2s; 
+}
+
+/* تنسيق النماذج */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button:hover { background: #2980b9; }
+
+/* الفوتر (الحقوق المحفوظة) - مثل الصورة تماماً */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: 3px solid var(--accent-color);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* تنسيق احترافي للموبايل - الوضع العمودي */
+@media (max-width: 600px) {
+    nav { 
+        flex-direction: row; /* يخلي القائمة جنب بعضها */
+        flex-wrap: wrap;    /* لو الكلام كتير ينزل سطر جديد تلقائي */
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    nav a {
+        padding: 5px 10px;
+        font-size: 13px; /* تصغير الخط شوية عشان يكفي العرض */
+    }
+
+    main { 
+        margin: 10px; 
+        padding: 15px;
+        width: auto;
+    }
+
+    /* سر جمال الجدول على الموبايل */
+    table {
+        display: block;
+        overflow-x: auto; /* يخلي الدكتور يشد الجدول يمين وشمال بصابعه لو كبير */
+        white-space: nowrap;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* تصغير العنوان عشان مياخدش مساحة */
+    }
+}
