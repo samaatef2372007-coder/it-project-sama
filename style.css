@@ -53,3 +53,41 @@ table th {
     background-color: #f2f2f2; 
     font-weight: bold;
 }
+body {
+    font-size: 22px;
+}
+
+h1 { 
+    font-size: 32px; 
+}
+
+h2 { 
+    font-size: 28px; 
+}
+
+input, textarea, button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    box-sizing: border-box; 
+}
+
+table {
+    font-size: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+    .container, main {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
